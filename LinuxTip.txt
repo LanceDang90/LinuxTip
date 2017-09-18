@@ -1,0 +1,200 @@
+Control-c : kill all the command is running 
+Alternate + Control + f1-f6 : open terminal
+sudo : substitue user do
+Command + "+" : increasing the text size in terminal
+Commnad + "-" : deceasing the text size
+
+
+
+1. killall <name> 
+	. kill all the program named <name> in this directory. 
+	. Example: when we cannot close Firefox, or other program
+
+2. touch <fileName1> <fileName2> <fileName3>
+	. Can create multiple file in this directory
+	. Example: touch file1.txt file2.txt
+	. Can touch the files to let the system update the time,
+		in which the files is touched.
+	. Example: touch *.txt
+
+
+3. which <programName>
+	. tell where <prgramName> is located
+	. Example
+
+4. ping <webBase> -c 3
+	. In the situation if the browser stop working, so we want to
+		dect the problem from the browser or computer connectivity.
+		Or to check the network is working or not
+	. Example: ping www.google.com -c 3
+		(3 is setting the limit, if not run 64 times, "control-c" to kill)
+
+5. cat <fileName> 
+   cat <fileName> | more
+   	. Open a file in terminal
+   	. Second command indicate that taking the output of cat to put into the
+   		input of more 
+   	. Example: cat LinuxTip.txt
+   			   cat LinuxTip.txt 
+
+6. less <fileName>
+	. Same as "cat" command, however, it allows to move around the file
+	. Example: less LinuxTip.txt
+
+7. sudo blkid
+	. Check if any drive is working
+	. Example: USB, or other program
+
+8. sudo -s
+	. Access to the root user, or act like a rooter of the system
+	. Dangerous if put in a wrong command
+	. Type "exit" to exit
+
+9. su <nameOfUser>
+   su - <nameOfUser> 
+	. Switch the user, login to <nameOfUser> account
+	. - : dash allow you to change thing in <nameOfUser> account
+	. Type "exit" to exit
+	. Example: su lancedang
+			   cd ~ 
+
+10. sudo reboot
+	. reboot the system, if the desktop stop working
+	. Alt + Control + f1-f6: open terminal
+
+11. sudo shutdown -h <time>
+	. shutdown the computer in a certain time
+	. Example: sudo shutdown -h now
+			   sudo shutdown -h 15 // 15 minutes
+	. If we want to interrupt: sudo shutdown -c
+
+12. man <manualPage>
+	. list the manual of <manualPage>, showing how to use it
+	. Example: man man
+			   man shutdown
+			   man mv
+			   man ls
+
+13. pwd
+	. Giving an absolute path of this directory
+
+14. pushd <directory>
+	. Jump to a new directory
+	. Example: pushd /Movies
+
+15. popd
+	. Jump back to where you are
+
+16. file <nameFile>
+	. Find out what kind of file it is: image, directory, ...
+	. Example: file .config
+			   file LinuxTip
+
+17. locate <phrase>
+	. find all the path contain <phrase>, getting from database
+	. Example: locate config
+
+18. sudo updatedb
+	. Update the database on the computer, if you have administrative
+		privilege
+
+19. cal
+	. Showing the calendar in the terminal
+
+20. history
+	history | les
+	. showing all the commands that have entered in the terminal
+		(around 1000 commands have been using so far)
+
+21. whatis <command>
+	. showing the information about the <command>
+		almost the same as: man <command>
+	. Example: whatis cal
+
+22. apropos <detail>
+	. showing everything relate to <detail>
+		<detail>: when you want to know something, but doesn't 
+		know the specific about it
+	. Example: apropos time
+
+23. mkdir <directory1> <directory2>
+	. Creating directories in that directory
+
+24. cp </fileName> <newName>
+	. Copy file <filename> from other directory to this directory
+		with a new name <newName>
+	. Example: cp ~/.bashrc newBashrc // copy from home dir to this dir
+			   cp newBashrc bashrc 	  // copy in the same dir 
+
+25. mv <oldFile> <newFile>
+	. Remove or rename the file
+	. Example: mv bashrc file1
+
+26. rm <fileName>
+	. Remove a file <fileName>
+	. Example: rm file1
+			   rm *
+			   rm file*
+
+27. rm -r <directoryName>
+	. Remove directory <directoryName>
+		recursively remove all the file and then the directory
+
+28. rmdir <emptyDirectory>
+	. Can only remove empty directory
+
+29. cat >> <fileName>
+	. Whatever do with cat just put at the end of file <fileName>
+		Control + C (or D):  exit
+
+30. cat > <fileName>
+	. Replace the content in <fileName> with whatever do with cat 
+
+30. cat <file1> <file2>
+	. Concatenate the content of <file1> to the end of <file2>
+
+31. more <fileName>
+	less <fileName>
+	. Almost the same as cat
+
+32. nano <fileName> 
+	. Create a file <fileName> (or open an exist file) and open in
+		text editor
+
+33. ls -al / > <fileName>
+	. get all and put in new file <filename>
+
+34. users
+	. Checking who is login to this computer
+
+35. id
+
+36. chmod +x <fileName>
+	. Change the mode of <fileName> to become executable for anybody
+	(-rwxr - xr - x 1 joe joe 5472 Mar 2 14:12 file1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
