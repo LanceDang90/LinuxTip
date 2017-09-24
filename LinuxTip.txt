@@ -173,7 +173,9 @@ Commnad + "-" : deceasing the text size
 	. Change the mode of <fileName> to become executable for anybody
 	(-rwxr - xr - x 1 joe joe 5472 Mar 2 14:12 file1)
 
-
+37. // Select a "pattern" in a whole directory
+    grep -R pattern directory
+    Example: grep -R "ToDo" hw2
 
 
 
