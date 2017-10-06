@@ -177,18 +177,41 @@ Commnad + "-" : deceasing the text size
     grep -R pattern directory
     Example: grep -R "ToDo" hw2
 
+38. pwd 
+	. show the path to the directory/file
 
+39. echo "export GOPATH=/Users/lancedang/GoWorkSpace" >> .bash_profile
+	. Adding the line "export GOPATH=/U..../GoWorkSpace" to file.bash_profile 
 
+40. echo $GOPATH
+	. Show the path we just add, or other path for other we want to check
 
+41. sudo nano /etc/paths
+	. adding a new path (be careful for not messing this file)
 
+42. PATH=$PATH:/usr/local/go/bin
+	export PATH=$PATH:/usr/local/go/bin (inside the .bash_profile)
+	. adding a new path start from $PATH to find the binary to run 
+	. PATH=/root:$PATH
+		This is dangerous because someone will take control
 
+43. sudo dpkg -i <file_name.deb>
+	. installing a software
 
+44. sudo apt-get <install> <....>
+	. install command in the terminal, instead of click on the program package
 
+45. source .bash_profile
+	. rerun run the terminal, after adding new feature in the .bash_profile
 
-
-
-
-
+46. PS1 = "\u-> ";
+	export PS1;
+# \h the hostname up to the first.
+# \s the name of the shell
+# \t the current time in 24-hour format 
+# \w the current working directory
+# \W the basename of the current working directory
+	. customize the prompt
 
 
 
