@@ -213,13 +213,94 @@ Commnad + "-" : deceasing the text size
 # \W the basename of the current working directory
 	. customize the prompt
 
+47. cd ~/.ssh/
+    ssh-keygen -t rsa
+        . Create a new pub-private key
+        . Will prompt to save the key in a new name file. Ex: my_key
+	. Will ask for passphrase, but don't really need too
+
+Purchasing an Virtual Private Server (VPS) on AWS or Digital OCEAN 
+then add public key to the server.
+
+48. cat ~/.ssh/my_key.pub
+	. Showing what is inside my_key.pub file
+
+48. cat ~/.ssh/my_key.pub | pbcopy
+	. Copy everything inside my_key.pub file 
+
+50. ssh -i ~/.ssh/my_key root@$YOUR_SERVER_IP
+	. -i is the identity
+	. my_key is a specific private key
+	. user name: right now is root
+
+51. top
+	. Inside the server. top is like a activity minitor
+	. top == htop (prettier version of top)
+	. If cannot run htop: apt-get install htop
+Setting up the server
+
+51. apt-get update
+	. update all the software on the server
+
+51. adduser USERNAME
+	. Adding username (create new user)
+	. since we don't want always running
+	. as a root, preventing mistake
+	. Provide password (for sudo later on)
+
+Sudo: super user do
+
+52. usermod -aG sudo USERNAME
+	. -aG: adding user to group
+	. adding USERNAME to sudo group
+
+If seeing "#": it means running as root
+
+53. su USERNAME 
+	. su: is switch user, switch to USERNAME
+	. Provide password
+
+54. cat /var/log/auth.log
+	. permission denied (if not root)
+
+55. sudo !!
+    sudo cat /var/log/auth.log
+	. !!: is a last command
+
+56. exit
+	. To exit
+
+56. ssh USERNAME@YOUR_SERVER_IP
+	. Login to the server using the new username just create
+	. Provide the password, when create the username
+
+Now try to login without using password
+
+57. cat ~/.ssh/my_key.pub | ssh USERNAME@SERVER_IP "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys" 
+	. cat ~/.ssh/my_key.pub | : print the contents of my_key.pub
+	. and pipe the output to the next command
+	. ssh USERNAME@SERVER_IP : ssh into your server
+	. mkdir -p ~/.ssh : make a .ssh folder in your home directory if
+	. it doesn't already exist
+	. cat >> ~/.ssh/authorized_keys : write the contents of the
+	. output to the file authorized_keys
+58. ssh -i my_key USERNAME@SERVER_IP
+    ssh -i ~/.ssh/my_key USERNAME@SERVER_IP
+	. Now we can login without asking for the password
+	. However, first time it will ask for password
+
+However, should ever using root login. 
+(inside the server)
+59. sudo vi /etc/ssh/sshd_config
+      PermitRootLogin (no)
+      PasswordAuthentication (no)
+      (:wq) 
+	. Disable root login
+	. Change ssh config, sshd (ssh damend)
+	. Damend is the process that run in the back of your sever
+
+60. sudo service ssh restart
+    sudo service sshd restart
+	. Restart ssh (both work)
 
 
-
-
-
-
-
-
-
-		
